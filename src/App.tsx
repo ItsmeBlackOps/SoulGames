@@ -30,15 +30,17 @@ function App() {
       
       <div className="max-w-md w-full relative z-10">
         <div className="bg-black/60 backdrop-blur-md rounded-2xl p-8 transform transition-all duration-500 border-2 border-squid-pink/30 animate-pulse-neon">
-          <div className="relative">
+          <div className="relative mb-8">
             <div className="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-squid-pink"></div>
             <div className="absolute -top-2 -right-2 w-4 h-4 border-t-2 border-r-2 border-squid-pink"></div>
             <div className="absolute -bottom-2 -left-2 w-4 h-4 border-b-2 border-l-2 border-squid-pink"></div>
             <div className="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-squid-pink"></div>
             
-            <h1 className="font-squid text-6xl text-white text-center mb-8 tracking-widest leading-tight">
-              GAME OF<br/>SOULS
-            </h1>
+            <img 
+              src="https://i.imgur.com/Lk2RMN6.png"
+              alt="Game of Souls"
+              className="w-full h-auto max-w-[300px] mx-auto drop-shadow-[0_0_15px_rgba(237,27,118,0.5)]"
+            />
           </div>
           
           {!clicked ? (
