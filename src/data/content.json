@@ -1,20 +1,55 @@
 {
-  "scenes": [
-    {
-      "id": "intro",
-      "text": "In the realm between light and shadow, your soul's journey begins...",
-      "image": "https://images.unsplash.com/photo-1519865885898-a54a6f2c7eea?auto=format&fit=crop&q=80&w=1200",
-      "background": "dark-forest"
-    },
-    {
-      "id": "challenge",
-      "text": "Face your inner demons and emerge stronger...",
-      "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=1200",
-      "background": "soul-chamber"
-    }
-  ],
+  "scenes": {
+    "regular": [
+      {
+        "id": "intro",
+        "text": "Welcome brave soul! Your journey through the mystical realms begins here...",
+        "image": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&q=80&w=1200",
+        "background": "dark-forest"
+      },
+      {
+        "id": "challenge-1",
+        "text": "Face the trials ahead with courage. Every warrior starts somewhere...",
+        "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=1200",
+        "background": "soul-chamber"
+      },
+      {
+        "id": "challenge-2",
+        "text": "Prove your worth in the arena of shadows. Glory awaits the determined...",
+        "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200",
+        "background": "dark-forest"
+      }
+    ],
+    "vip": [
+      {
+        "id": "vip-intro",
+        "text": "Welcome, esteemed VIP! The golden gates of the celestial realm open before you...",
+        "image": "https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?auto=format&fit=crop&q=80&w=1200",
+        "background": "vip-lounge"
+      },
+      {
+        "id": "vip-exclusive",
+        "text": "Behold the sacred chambers, where only the chosen few may tread. Ancient secrets await your discovery...",
+        "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200",
+        "background": "vip-arena"
+      },
+      {
+        "id": "vip-special",
+        "text": "Your VIP status grants you access to legendary artifacts and mystical powers beyond mortal comprehension...",
+        "image": "https://images.unsplash.com/photo-1515890435782-59cd0b5ddb38?auto=format&fit=crop&q=80&w=1200",
+        "background": "vip-sanctum"
+      }
+    ]
+  },
   "backgrounds": {
     "dark-forest": "linear-gradient(to bottom, rgba(10, 10, 10, 0.9), rgba(30, 30, 30, 0.9))",
-    "soul-chamber": "linear-gradient(to bottom, rgba(5, 5, 5, 0.9), rgba(20, 20, 20, 0.9))"
+    "soul-chamber": "linear-gradient(to bottom, rgba(5, 5, 5, 0.9), rgba(20, 20, 20, 0.9))",
+    "vip-lounge": "linear-gradient(to bottom, rgba(30, 0, 60, 0.9), rgba(60, 0, 30, 0.9))",
+    "vip-arena": "linear-gradient(to bottom, rgba(60, 30, 0, 0.9), rgba(30, 60, 0, 0.9))",
+    "vip-sanctum": "linear-gradient(to bottom, rgba(0, 30, 60, 0.9), rgba(60, 0, 60, 0.9))"
+  },
+  "vipCredentials": {
+    "id": "VIP2024",
+    "password": "elite999"
   }
 }
