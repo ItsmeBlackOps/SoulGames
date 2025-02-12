@@ -13,7 +13,10 @@ export default {
       },
       boxShadow: {
         'neon': '0 0 20px rgba(237, 27, 118, 0.5)',
-      }
+      },
+      fontFamily: {
+        'squid': ['"Black Han Sans"', 'sans-serif'],
+      },
     },
   },
   plugins: [],

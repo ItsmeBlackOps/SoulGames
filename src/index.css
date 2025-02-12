@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -13,6 +15,33 @@
   }
 }
 
+@keyframes pulse-neon {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(237, 27, 118, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(237, 27, 118, 0.8);
+  }
+}
+
 .animate-fade-in {
   animation: fade-in 0.5s ease-out forwards;
+}
+
+.font-squid {
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 2s infinite;
+}
+
+.bg-squid-pattern {
+  background-image: 
+    linear-gradient(30deg, rgba(237, 27, 118, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(237, 27, 118, 0.1) 87.5%, rgba(237, 27, 118, 0.1)),
+    linear-gradient(150deg, rgba(237, 27, 118, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(237, 27, 118, 0.1) 87.5%, rgba(237, 27, 118, 0.1)),
+    linear-gradient(30deg, rgba(237, 27, 118, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(237, 27, 118, 0.1) 87.5%, rgba(237, 27, 118, 0.1)),
+    linear-gradient(150deg, rgba(237, 27, 118, 0.1) 12%, transparent 12.5%, transparent 87%, rgba(237, 27, 118, 0.1) 87.5%, rgba(237, 27, 118, 0.1));
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0;
 }
