@@ -17,15 +17,13 @@ function App() {
       style={{
         background: clicked 
           ? contentData.backgrounds["dark-forest"]
-          : "linear-gradient(to br, #ed1b76, #f44786, #249f9c)"
+          : "linear-gradient(to br, #ed1b76, #f44786, #249f9c)",
+        backgroundSize: clicked ? 'cover' : 'auto',
+        backgroundPosition: clicked ? 'center' : 'initial'
       }}
     >
       {clicked && (
-        <img
-          src={contentData.scenes[currentScene].image}
-          alt="Atmospheric background"
-          className="absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-1000"
-        />
+        <div className="absolute inset-0 bg-black/40" /> // Added overlay for better text readability
       )}
       
       <div className="max-w-md w-full relative z-10">
