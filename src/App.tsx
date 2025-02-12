@@ -17,13 +17,18 @@ function App() {
       style={{
         background: clicked 
           ? contentData.backgrounds["dark-forest"]
-          : "linear-gradient(to br, #ed1b76, #f44786, #249f9c)",
-        backgroundSize: clicked ? 'cover' : 'auto',
-        backgroundPosition: clicked ? 'center' : 'initial'
+          : `url('https://i.imgur.com/rVg7CW4.jpeg')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
       }}
     >
       {clicked && (
-        <div className="absolute inset-0 bg-black/40" /> // Added overlay for better text readability
+        <img
+          src={contentData.scenes[currentScene].image}
+          alt="Atmospheric background"
+          className="absolute inset-0 w-full h-full object-cover opacity-20 transition-opacity duration-1000"
+        />
       )}
       
       <div className="max-w-md w-full relative z-10">
