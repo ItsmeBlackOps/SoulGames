@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Skull, Crown, User, Lock } from 'lucide-react';
+import { Crown, User, Lock, AlertCircle } from 'lucide-react';
 import contentData from './data/content.json';
 
 function App() {
@@ -8,15 +8,47 @@ function App() {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
   const [isVip, setIsVip] = useState(false);
+  const [error, setError] = useState('');
 
-  const validateVipCredentials = (id: string, pwd: string) => {
-    return id === contentData.vipCredentials.id && pwd === contentData.vipCredentials.password;
+  const validateCredentials = (id: string, pwd: string): { isValid: boolean; isVip: boolean } => {
+    // Reset error state
+    setError('');
+
+    // Validate input
+    if (!id.trim() || !pwd.trim()) {
+      setError('Please enter both ID and password');
+      return { isValid: false, isVip: false };
+    }
+
+    // Check if user exists in storage
+    const userData = (contentData.storageData as Record<string, { pass: string; access: number }>)[id];
+    if (!userData) {
+      setError('Invalid player ID');
+      return { isValid: false, isVip: false };
+    }
+
+    // Validate password
+    if (userData.pass.toString() !== pwd.toString()) {
+      setError('Incorrect password');
+      return { isValid: false, isVip: false };
+    }
+
+    // Valid login - determine access level
+    return { 
+      isValid: true, 
+      isVip: userData.access === 1 
+    };
   };
 
   const handleLogin = () => {
-    setIsVip(validateVipCredentials(userId, password));
-    setClicked(true);
-    setCurrentScene(0);
+    const { isValid, isVip } = validateCredentials(userId, password);
+    
+    if (isValid) {
+      setIsVip(isVip);
+      setClicked(true);
+      setCurrentScene(0);
+      setError(''); // Clear any existing errors
+    }
   };
 
   const scenes = isVip ? contentData.scenes.vip : contentData.scenes.regular;
@@ -31,6 +63,12 @@ function App() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleLogin();
+    }
+  };
 
   return (
     <div 
@@ -76,6 +114,7 @@ function App() {
                       placeholder="Enter ID"
                       value={userId}
                       onChange={(e) => setUserId(e.target.value)}
+                      onKeyPress={handleKeyPress}
                       className="w-full pl-10 pr-4 py-2 bg-white/10 border-2 border-squid-pink/50 rounded-lg 
                         text-white placeholder-white/50 focus:outline-none focus:border-squid-pink
                         transition-colors duration-300"
@@ -95,12 +134,19 @@ function App() {
                       placeholder="Enter password"
                       value={password}
                       onChange={(e) => setPassword(e.target.value)}
+                      onKeyPress={handleKeyPress}
                       className="w-full pl-10 pr-4 py-2 bg-white/10 border-2 border-squid-pink/50 rounded-lg 
                         text-white placeholder-white/50 focus:outline-none focus:border-squid-pink
                         transition-colors duration-300"
                     />
                   </div>
                 </div>
+                {error && (
+                  <div className="flex items-center justify-center gap-2 text-red-500 text-sm font-medium text-center bg-red-500/10 py-2 px-4 rounded-lg">
+                    <AlertCircle className="w-4 h-4" />
+                    <span>{error}</span>
+                  </div>
+                )}
                 <button
                   onClick={handleLogin}
                   className="w-full py-3 px-6 bg-squid-pink hover:bg-squid-lightPink text-white 
