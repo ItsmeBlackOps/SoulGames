@@ -3,19 +3,19 @@
     "regular": [
       {
         "id": "intro",
-        "text": "Welcome brave soul! Your journey through the mystical realms begins here...",
+        "text": "Namaste, veer yodha! Aapke dil mein sapne aur junoon jag rahe hain – iss jadui safar ka pehla padav, anek rahasyon se bhara hai, jahan har kadam mein dil aur himmat ki dhun bajti hai!",
         "image": "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?auto=format&fit=crop&q=80&w=1200",
         "background": "dark-forest"
       },
       {
         "id": "challenge-1",
-        "text": "Face the trials ahead with courage. Every warrior starts somewhere...",
+        "text": "Chalo, himmat se aage badho! Jaise har shandar yodha ki kahani ek nayi shuruaat se shuru hoti hai, waise hi aapka safar hai ek damdaar pehel – zindagi ka asli rang dikhane ka waqt aa gaya hai!",
         "image": "https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=1200",
         "background": "soul-chamber"
       },
       {
         "id": "challenge-2",
-        "text": "Prove your worth in the arena of shadows. Glory awaits the determined...",
+        "text": "Andheron ke maidan mein apni shaan aur jazbe ka pramaan do! Yeh khel hai unhi ke liye jo hausle se ladte hain, kyunki jeet unka intezar karti hai jo apni taqat aur astitva ko samarpit kar dete hain!",
         "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=1200",
         "background": "dark-forest"
       }
@@ -23,19 +23,19 @@
     "vip": [
       {
         "id": "vip-intro",
-        "text": "Welcome, esteemed VIP! The golden gates of the celestial realm open before you...",
+        "text": "Swagat hai, izzatdar mehmaan! Aapke liye aasmaani jagat ke sone ke darwaze khulte hain, jaise roshni se bhari subah ka vaada ho!",
         "image": "https://images.unsplash.com/photo-1614036634955-ae5e90f9b9eb?auto=format&fit=crop&q=80&w=1200",
         "background": "vip-lounge"
       },
       {
         "id": "vip-exclusive",
-        "text": "Behold the sacred chambers, where only the chosen few may tread. Ancient secrets await your discovery...",
+        "text": "Dekhiye, pavitra aangan jahan sirf chuninda dil kadam rakhte hain. Sadiyon ke raaz, ab aapki nazron ke saamne ujagar hone ko hain!",
         "image": "https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80&w=1200",
         "background": "vip-arena"
       },
       {
         "id": "vip-special",
-        "text": "Your VIP status grants you access to legendary artifacts and mystical powers beyond mortal comprehension...",
+        "text": "Aapki VIP pehchaan kholti hai raaz bhare itihaas ke anokhe saamagriyon ka raasta, aur chamatkari shaktiyan, jo insaan ki soch se pare hain!",
         "image": "https://images.unsplash.com/photo-1515890435782-59cd0b5ddb38?auto=format&fit=crop&q=80&w=1200",
         "background": "vip-sanctum"
       }
