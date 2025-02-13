@@ -48,8 +48,14 @@
     "vip-arena": "linear-gradient(to bottom, rgba(60, 30, 0, 0.9), rgba(30, 60, 0, 0.9))",
     "vip-sanctum": "linear-gradient(to bottom, rgba(0, 30, 60, 0.9), rgba(60, 0, 60, 0.9))"
   },
-  "vipCredentials": {
-    "id": "Soul",
-    "password": "Joddd"
+  "storageData": {
+    "123": {
+      "pass": "000",
+      "access": 0
+    },
+    "456": {
+      "pass": "111",
+      "access": 1
+    }
   }
 }
